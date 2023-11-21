@@ -1,0 +1,8 @@
+<template>
+    <lightning-button onclick={handleAlertClick} label="Open Alert Modal">
+    </lightning-button>
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="loading...">
+        </lightning-spinner>
+    </template>
+</template>

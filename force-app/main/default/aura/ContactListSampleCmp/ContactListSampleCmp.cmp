@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable" access="global">
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="AccountId" type="String"></aura:attribute>
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+    <c:contactListSampleLwc onclosecurrenttab="{!c.handleCloseCurrentTabEvent}" accountId="{!v.AccountId}"></c:contactListSampleLwc>
+</aura:component>

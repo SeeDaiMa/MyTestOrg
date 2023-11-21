@@ -1,0 +1,71 @@
+<template>
+    
+    <lightning-card title="Custom Dependent Picklist using Lightning Web Components"><br/>
+        
+        <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+        >
+        <lightning-layout>
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+            <lightning-input-field field-name="test_filed__c">
+            </lightning-input-field>   
+            </lightning-layout-item>
+
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+                
+            <lightning-input-field field-name="Fax">
+            </lightning-input-field> 
+            </lightning-layout-item>
+        </lightning-layout>   
+        <lightning-layout>
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+            <lightning-input-field field-name="Master_Picklist__c">
+
+​            </lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+                <lightning-input-field field-name="Controlling_Picklist__c"></lightning-input-field>
+            </lightning-layout-item>
+​   
+            </lightning-layout>
+​        </lightning-record-edit-form>
+            
+
+        <!-- <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+        >
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="Fax">
+            </lightning-input-field>
+            <lightning-input-field field-name="Phone"> </lightning-input-field></lightning-input-field>
+        </lightning-record-edit-form> -->
+        
+    
+    
+
+        <lightning-layout>
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+                <lightning-combobox label="master picklist" 
+                                    name="master" 
+                                    onchange={handleMasterPicklistChange} 
+                                    options={masterValues} 
+                                    placeholder="--None--" 
+                                    value={selectedMasterValue}></lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item  padding="around-small" flexibility='auto' size='6'>
+                <lightning-combobox label="controlling picklist" 
+                                    name="controlling"
+                                    onchange={handleControllingPicklistChange} 
+                                    options={controllingValues} 
+                                    placeholder="--None--" 
+                                    value={selectedControllingValue}
+                                    ></lightning-combobox>
+            </lightning-layout-item>
+            
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<aura:component implements="lightning:availableForFlowScreens" controller="CommentController" access="global">
+
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="IdsRows" type="String"/>
+    <aura:attribute name="maxRowSelection" type="String"/>
+    <aura:attribute name="recordId" type="String"  access="global"/>
+    <aura:attribute name="selectedRowsList" type="List"/>
+
+    <aura:attribute name="validate" type="Aura.Action"
+    description="custom validation function to run when the flow is navigated to the next screen.
+        The function must evaluate_the component and return values for isValid and
+        errorMessage. " />
+
+        <aura:handler name="init" value="{!this}" action="{!c.doInit }" />
+
+        <lightning:datatable
+                            keyField="id"
+                            data="{!v.data}"
+                            columns="{!v.columns}"
+                            selectedRows="{!v.selectedRows}"
+                            maxRowSelection="{!v.maxRowSelection}"
+                            onrowselection="{!c.getSelectedRecord}"
+                           >
+        </lightning:datatable>
+
+
+
+</aura:component>

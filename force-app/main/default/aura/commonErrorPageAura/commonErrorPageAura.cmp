@@ -1,0 +1,5 @@
+<aura:component implements="lightning:isUrlAddressable" access="global">
+    <aura:attribute name="errorMessage" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" ></aura:handler>
+    <c:commonErrorPage errorMessage="{!v.errorMessage}"></c:commonErrorPage>
+</aura:component>

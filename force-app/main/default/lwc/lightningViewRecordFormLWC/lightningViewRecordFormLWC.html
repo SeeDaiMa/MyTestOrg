@@ -1,0 +1,67 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-09-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+    <lightning-card title="record edit form" icon-name="custom:custom9">
+        <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name="Account"
+    >
+    <lightning-messages> </lightning-messages>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <!-- More lightning-input-field components here -->
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3">
+                <!-- More lightning-input-field components here -->
+                <lightning-output-field field-name="Fax"></lightning-output-field>
+            </div>
+            
+        </div>
+        <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-3">
+            <lightning-input-field field-name="Name" onchange={checkError}></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <!-- More lightning-input-field components here -->
+            <lightning-input-field field-name="Phone" onchange={checkError}></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <!-- More lightning-input-field components here -->
+            <lightning-input-field field-name="Fax" onchange={checkError}></lightning-input-field>
+        </div>
+    </div>
+
+    
+
+        <div class="slds-m-top_medium">
+            <lightning-button
+                class="slds-m-top_small"
+                label="Cancel"
+                onclick={handleReset}
+            ></lightning-button>
+            <lightning-button
+                variant="brand"
+                class="slds-m-top_small"
+                type="Submit"
+                label="Save Record"
+            ></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+
+    <c-view-source source="lwc/recordEditFormDynamicContact" slot="footer">
+        Create an edit-mode form for a specific record. This recipe uses a
+        dynamic schema definition (fields are specified as string).
+    </c-view-source>
+    </lightning-card>
+    
+</template>

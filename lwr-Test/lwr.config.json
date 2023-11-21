@@ -1,0 +1,37 @@
+{
+    "lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
+    "routes": [
+        {
+            "id": "example",
+            "path": "/",
+            "rootComponent": "example/app"
+        }
+    ],
+    "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/public/assets"
+        },
+        {
+            "alias": "favicon",
+            "file": "$rootDir/src/assets/favicon.ico",
+            "urlPath": "/favicon.ico"
+        }
+    ],
+    "errorRoutes": [
+        {
+            "id": "not_found",
+            "status": 404,
+            "rootComponent": "example/notFound"
+        },
+        {
+            "id": "server_error",
+            "status": 500,
+            "contentTemplate": "$contentDir/not-found.html"
+        }
+    ],
+    "port": 3000,
+    "serverMode": "prod"
+    // "serverType": "express"
+}

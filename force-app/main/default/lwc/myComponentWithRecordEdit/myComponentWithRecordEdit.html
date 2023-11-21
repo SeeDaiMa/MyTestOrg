@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-09-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+    <lightning-record-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+        fields={fields}
+        columns="2"
+        mode="view"
+        onsubmit={handleSubmit}
+        onsuccess={handleSuccess}
+        onerror={handleError}
+        oncancel={handleCancel}
+        onload={handleLoad}
+        >
+    </lightning-record-form>
+</template>

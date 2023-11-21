@@ -1,0 +1,27 @@
+<template>
+    <lightning-record-edit-form
+        object-api-name='Account'
+        record-id={recordId}
+        onsubmit={handleSubmit}
+    >
+
+    <lightning-input-field field-name="test_user__c"></lightning-input-field>
+    <lightning-button type="submit" label="get test user id" variant="brand"> 
+        </lightning-button>
+    </lightning-record-edit-form>
+
+    <c-custom-look-up-for-lwc
+        unique-key={item.Id} 
+        value-id={accountId} 
+        obj-name="Account" 
+        icon-name="standard:account" 
+        search-label="Search Account" 
+        onvalueselect={handleSelection}
+        fields={item.fields}>
+    </c-custom-look-up-for-lwc> 
+
+    <c-custom-look-up-for-l-w-c2
+    obj-name="Account" 
+    icon-name="standard:account">
+</c-custom-look-up-for-l-w-c2> 
+</template>

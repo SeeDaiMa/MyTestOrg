@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <lightning-button-group>
+            <lightning-button onclick={showTabInfo} label="显示Tab信息"></lightning-button>
+
+            <lightning-button onclick={changeTabInfo} label="更改Tab信息"></lightning-button>
+
+            <lightning-button onclick={addSubTabInfo} label="打开Sub Tab"></lightning-button>
+        </lightning-button-group>
+        <div>
+            {result}
+        </div>
+    </lightning-card>
+</template>

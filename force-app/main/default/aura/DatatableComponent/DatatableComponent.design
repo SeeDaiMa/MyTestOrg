@@ -1,0 +1,5 @@
+<design:component label="Comment DataTable">
+    <design:attribute name="recordId" label="Case Id" />
+    <design:attribute name="IdsRows" label="Selected Rows" description="Provide the values comma separated" />
+    <design:attribute name="maxRowSelection" label="Max No of Records to be Selected"  />
+</design:component>

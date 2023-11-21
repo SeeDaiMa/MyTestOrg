@@ -1,0 +1,5 @@
+<template>
+    <c-account-search-form onsearchaccount={handleSearchAccountEvent}></c-account-search-form>
+    <c-my-account-list is-first-page={isFirstPage} is-last-page={isLastPage} account-list={accountList} account-list-for-current-page={accountListForCurrentPage} total-checked={totalChecked} onitemcheck={handleItemCheckEvent} onallcheck={handleAllCheckedEvent} onnextpage={handleNextPageEvent} onpreviouspage={handlePreviousPageEvent} total-size={totalSize} per-size={perSize} onpersizechange={handlePerSizeChangeEvent}></c-my-account-list>
+
+</template>

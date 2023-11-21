@@ -1,0 +1,73 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-06-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+   
+<lightning-card title="HelloConditionalRendering" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <p>hello LWC</p>
+      <p>姓名：{person.name}</p>
+      <lightning-input label="修改个人的姓名" value={personName} onchange={updatePersonName}></lightning-input>
+    </div>
+    
+    <div class="slds-m-around_medium">
+      <lightning-input label="姓" value={firstName} onchange={updatefirstName}></lightning-input>
+      <lightning-input label="名" value={lastName} onchange={updatelastName}></lightning-input>
+      <p class="slds-m-top_medium">Uppercased Full Name: {uppercasedFullName}</p>
+    </div>
+   
+    <div class="slds-m-around_medium">
+     <h3>条件性渲染DOM元素</h3>
+     <button onclick={changeCondition} >改变</button>
+     <p></p>
+     <template if:true={condition}>条件为true的时候显现</template>
+     <template if:false={condition}>条件为false的时候显现</template>
+    </div>
+
+    <div class="slds-m-around_medium">
+      <h2>for:each指令</h2>
+      <ul class="slds-m-around_medium"  >
+        <template for:each={People} for:item="p" for:index="index">
+        <li key={p.id}>index:{index}, id: {p.id} ,name:{p.name},age:{p.age}</li>
+        </template>
+      </ul>
+     </div>
+
+   
+
+</lightning-card>
+
+
+<lightning-card title="HelloIterator" icon-name="custom:custom14">
+  <ul class="slds-m-around_medium">
+      <template iterator:it={People}>
+          <li key={it.value.id}>
+              <div if:true={it.first} class="list-first"></div>
+              {it.index},{it.value.name}, {it.value.age}
+              <div if:true={it.last} class="list-last"></div>
+          </li>
+      </template>
+  </ul>
+</lightning-card>
+
+
+
+
+
+
+<lightning-card title="Test Iteratable"  icon-name="custom:custom14">
+  <lightning-datatable
+          key-field="id"
+          data={goods}
+          columns={columns}>
+  </lightning-datatable>
+</lightning-card>
+
+
+
+
+</template>

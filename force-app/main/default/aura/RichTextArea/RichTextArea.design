@@ -1,0 +1,8 @@
+<design:component label="RichTextArea">
+    
+    <design:attribute name="label" label = "Label"/>
+    <design:attribute name="value" label = "Value"/>
+    <design:attribute name="required" label="Required?"/>
+    <design:attribute name="placeHolder" label="PlaceHolder"/> 
+    
+</design:component>

@@ -1,0 +1,8 @@
+<template>
+    <lightning-datatable
+        key-field="id"
+        data={contacts}
+        columns={columnsList}>
+    </lightning-datatable>
+    <template lwc:true={errors}> {errors}</template>
+</template>

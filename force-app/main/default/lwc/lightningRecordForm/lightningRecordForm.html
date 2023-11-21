@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-09-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+    <lightning-card title="Custom Display Record Form" icon-name="custom:custom9">
+
+
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name="Account"
+        >
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="Fax">
+            </lightning-input-field>
+            <lightning-input-field field-name="Phone"> </lightning-input-field>
+            
+            <lightning-button
+                type="submit"
+                label="Update Record"
+                class="slds-m-top_medium"
+            >
+            </lightning-button>
+        </lightning-record-edit-form>
+    </div>
+    <!-- Record Display -->
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning-record-view-form
+        record-id={recordId}
+        object-api-name="Account"
+        >
+            <div class="slds-box">
+                <lightning-output-field field-name="Name">
+                </lightning-output-field>
+                <lightning-output-field field-name="Fax">
+                </lightning-output-field>
+                <lightning-output-field field-name="Phone">
+                </lightning-output-field>
+            </div>
+        </lightning-record-view-form>
+    </div>
+
+</lightning-card>
+    
+</template>

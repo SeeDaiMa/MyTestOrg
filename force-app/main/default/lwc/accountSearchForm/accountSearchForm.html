@@ -1,0 +1,35 @@
+<template>
+    <!--use LDS to bind account -->
+    <lightning-record-edit-form
+        object-api-name='Account'
+        onsubmit={handleRecordFormSubmit}
+    >
+        <!--used to show section close/open-->
+        <lightning-accordion allow-multiple-sections-open
+            active-section-name={activeSections}>
+
+            <lightning-accordion-section name="basic" label="basic">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item  padding="around-small" flexibility='auto' size='4'>
+                        <lightning-input-field field-name='Name'></lightning-input-field>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item padding="around-small" flexibility='auto' size='4'>
+                        <lightning-input-field field-name="AccountSource"></lightning-input-field>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item padding="around-small" flexibility='auto' size='4'>
+                        <lightning-input-field field-name="Industry"></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-accordion-section>
+        </lightning-accordion>
+
+        <!-- button group area -->
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item >
+                <lightning-button variant="brand" label="search" type="submit" name="search"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-record-edit-form>
+</template>

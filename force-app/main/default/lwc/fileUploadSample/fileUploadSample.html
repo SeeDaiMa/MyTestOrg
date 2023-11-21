@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="File Upload">
+        <lightning-file-upload
+            label="上传附件"
+            name="fileUploader"
+            accept={acceptedFormats}
+            record-id={recordId}
+            onuploadfinished={handleUploadFinishedEvent}
+            multiple>
+    </lightning-file-upload>
+    </lightning-card>
+</template>

@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:attribute name="aaaa"  type="String"></aura:attribute>
+    <button onclick="{!c.clickChild}">child Btn</button>
+</aura:component>

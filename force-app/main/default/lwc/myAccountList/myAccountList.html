@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="list for account data" icon-name="standard:account">
+        <div style="height: 150px;">
+            <lightning-datatable
+                data={accountListForCurrentPage}
+                columns={columns}
+                show-row-number-column
+                key-field="id">
+            </lightning-datatable>
+        </div>
+
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item flexibility='auto' size='1'>
+                <lightning-combobox
+                    value={perSize}
+                    options={entryList}
+                    placeholder="choose size"
+                    onchange={handlePerSizeChange} >
+
+                </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility='auto' size='9' class="slds-text-align_center">
+                totalSize: {totalSize}
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" size="2">
+                <lightning-button variant="brand" label="<--" disabled={isFirstPage} onclick={handlePreviousPageClick}></lightning-button>
+                <lightning-button variant="brand" label="-->" disabled={isLastPage} title="next" onclick={handleNextPageClick}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="6">
+            <lightning-input label="test parent" type="text" required></lightning-input><br />
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <c-test-son-input-component onvalid={getValidResult}></c-test-son-input-component>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="validity" onclick={checkInputValidity}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

@@ -1,0 +1,4 @@
+<template>
+    <lightning-input type="file" label="上传" onchange={excelFileToJson} disabled={disableButton} accept="xlsx" multiple="false"></lightning-input>
+    <lightning-button label="打印结果" onclick={printResult} disabled={disableButton}></lightning-button>
+</template>

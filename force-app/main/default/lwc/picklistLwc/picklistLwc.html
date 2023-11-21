@@ -1,0 +1,32 @@
+<template>
+    
+
+    <lightning-card title="Custom Dependent Picklist using Lightning Web Components">
+        <lightning-layout>
+                <lightning-layout-item  padding="around-small" flexibility='auto' size="6">
+                    <lightning-combobox
+                    name="masterPicklist"
+                    options={masterPicklist}
+                    onchange={handleChange}
+                    placeholder="--None--"
+                    value={selectedMasterValue}
+                    label="master picklist">
+
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <lightning-layout-item   padding="around-small" flexibility='auto' size="6">
+                    <lightning-combobox
+                    name="controllerPicklist"
+                    options={controllerPicklist}
+                    onchange={handleChange}
+                    placeholder="--None--"
+                    value={selectedControllerValue}
+                    label="controlling picklist">
+                        
+                    </lightning-combobox>
+                </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>

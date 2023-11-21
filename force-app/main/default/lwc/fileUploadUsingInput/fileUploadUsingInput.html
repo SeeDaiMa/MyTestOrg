@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="File Upload Using Input">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <lightning-input label="" name="file uploader" onchange={handleFilesChange} type="file" accept={acceptedType}></lightning-input><br/>
+                <div class="slds-text-body_small">{fileName}
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label={UploadFile} onclick={handleSave} variant="brand"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <template if:true={showLoadingSpinner}>
+            <lightning-spinner alternative-text="Uploading now"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>

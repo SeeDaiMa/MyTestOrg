@@ -1,0 +1,66 @@
+<aura:component implements="lightning:actionOverride,lightning:availableForFlowActions,force:hasSObjectName,force:lightningQuickAction,lightning:isUrlAddressable" access="global">
+
+        <aura:attribute name="btn1" type="Boolean" default="true" />
+        <aura:attribute name="btn2" type="Boolean" default="true" />
+        <div class="slds-size_1-of-1" >
+            <h3 class="slds-section__title">
+            
+                <button  aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action"
+                 onclick="{!c.changeByBtn1}">
+                        <lightning:icon  aura:id="icon1" iconName="utility:chevrondown"  title="chevrondown" />
+                        <span class="slds-truncate" title="Details">Details</span>
+                </button>
+            </h3 >
+            <aura:if isTrue="{!v.btn1}">
+            <lightning:input  aura:id="propName" name="propName" label="Name" required="true" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+            <lightning:input aura:id="propBaths" name="propBaths" label="Email" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+                
+            <lightning:input aura:id="propPrice" name="propPrice" label="Phone" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+            <lightning:select aura:id="propStatus" name="propStatus" label="Referral Source" value="" required="true" class="slds-size--1-of-2 slds-p-horizontal_x-small">
+                    <option value="--None--">--None--</option>
+                    <option value="Resource">Resource</option>
+                    <option value="Event">Event</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Office">Office</option>
+                    <option value="Other">Other</option>
+            </lightning:select> 
+            </aura:if>
+        </div>
+
+        <div class="slds-size_1-of-1"  style="margin-top: 10px;">
+            <h3 class="slds-section__title">
+            
+                <button  aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action"
+                 onclick="{!c.changeByBtn2}">
+                        <lightning:icon  aura:id="icon2" iconName="utility:chevrondown"  title="chevrondown" />
+                        <span class="slds-truncate" title="Details">Details</span>
+                </button>
+            </h3 >
+            <aura:if isTrue="{!v.btn2}">
+            <lightning:input  aura:id="propName" name="propName" label="Name" required="true" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+            <lightning:input aura:id="propBaths" name="propBaths" label="Email" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+                
+            <lightning:input aura:id="propPrice" name="propPrice" label="Phone" class="slds-size--1-of-2 slds-p-horizontal_x-small"/>
+            <lightning:select aura:id="propStatus" name="propStatus" label="Referral Source" value="" required="true" class="slds-size--1-of-2 slds-p-horizontal_x-small">
+                    <option value="--None--">--None--</option>
+                    <option value="Resource">Resource</option>
+                    <option value="Event">Event</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Office">Office</option>
+                    <option value="Other">Other</option>
+            </lightning:select> 
+            </aura:if>
+        </div>
+        
+
+        <lightning:recordEditForm recordId="003XXXXXXXXXXXXXXX" objectApiName="Contact">
+        <lightning:messages />
+        <lightning:outputField fieldName="AccountId" />
+        <lightning:inputField fieldName="FirstName" />
+        <lightning:inputField fieldName="LastName" />
+        <lightning:inputField fieldName="Email" />
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+    </lightning:recordEditForm>
+        
+
+</aura:component>

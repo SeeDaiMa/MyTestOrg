@@ -1,0 +1,5 @@
+<aura:component implements="lightning:actionOverride,lightning:availableForFlowActions,force:hasSObjectName,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+    <aura:attribute name="aaaa"  type="String"></aura:attribute>
+    <c:child aaaa="{!v.aaaa}"></c:child>
+    <button onclick="{!c.clickParent}">Parent Btn</button>
+</aura:component>

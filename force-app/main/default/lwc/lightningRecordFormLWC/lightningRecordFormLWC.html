@@ -1,0 +1,46 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-09-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+  <lightning-card title="view mode" icon-name="custom:custom9">
+    <lightning-record-form
+        record-id={recordId}
+        object-api-name="Account"
+        layout-type="Compact"
+        columns="2"
+        mode="view">
+    </lightning-record-form>    
+  </lightning-card>
+    
+  <lightning-card title="readonly mode" icon-name="custom:custom9">
+    <lightning-record-form
+        record-id={recordId}
+        object-api-name="Account"
+        layout-type="Compact"
+        mode="readonly">
+    </lightning-record-form>    
+  </lightning-card>
+
+  <lightning-card title="edit mode" icon-name="custom:custom9">
+    <lightning-record-form
+        record-id={recordId}
+        object-api-name="Account"
+        layout-type="Compact"
+        mode="edit">
+    </lightning-record-form>    
+  </lightning-card>
+    
+
+  <lightning-card title="Full layout-type view mode" icon-name="custom:custom9">
+    <lightning-record-form
+        record-id={recordId}
+        object-api-name="Account"
+        layout-type="Full"
+        mode="view">
+    </lightning-record-form>    
+  </lightning-card>
+</template>

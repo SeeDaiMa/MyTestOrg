@@ -1,0 +1,19 @@
+<aura:component implements="force:hasRecordId,lightning:actionOverride,force:lightningQuickAction,flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,lightning:hasPageReference"
+access="global">
+<aura:attribute name="Name" type="String"/>
+<aura:attribute name="Phone" type="String"/>
+<aura:attribute name="BillingAddress" type="String"/>
+<aura:attribute name="Match_Billing_Address__c" type="Boolean" default="false"/>
+
+        <div class="slds-p-around_medium">
+            <lightning:recordEditForm objectApiName="Account"
+                                         onsubmit="{!c.handleSubmit}">
+                <lightning:messages />
+                <lightning:inputField fieldName="Name" value="{!v.Name}"  />
+                <lightning:inputField fieldName="Phone" value="{!v.Phone}" />
+                <lightning:inputField fieldName="BillingAddress" value="{!v.BillingAddress}" />
+                <lightning:input type="checkbox" fieldName="Match_Billing_Address__c" Checked="{!v.Match_Billing_Address__c}" />
+                <lightning:button type="submit" name="Submit" label="submit" class="slds-m-top_medium"/>
+            </lightning:recordEditForm>
+        </div>
+    </aura:component>

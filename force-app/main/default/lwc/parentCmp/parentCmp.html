@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : shihuang.zhou
+  @group             : 
+  @last modified on  : 04-07-2023
+  @last modified by  : shihuang.zhou
+-->
+<template>
+    <lightning-card title="EventSimple" icon-name="custom:custom9">
+      <lightning-layout>
+        <lightning-layout-item>
+
+        <lightning-button onclick={logChildByParent} label="触发子类的方法"> </lightning-button>
+        <lightning-input label="父" value={parentAtt} onchange={changeParentAtt}></lightning-input>
+        <c-child-cmp child-att = {parentAtt}></c-child-cmp>
+      </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+</template>
