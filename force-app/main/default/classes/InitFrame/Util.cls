@@ -7,17 +7,6 @@
 **/
 public with sharing class Util {
     
-    // 在下面获取User可用的简档的名字
-    public enum ACTIVE_PROFILE_NAME {
-        SYSTEM_ADMINISTRATOR,
-        STANDARD_USER
-    }
-
-    private static Map<ACTIVE_PROFILE_NAME,String> getUserProfileNames = new Map<ACTIVE_PROFILE_NAME,String>{
-        ACTIVE_PROFILE_NAME.SYSTEM_ADMINISTRATOR => 'System Administrator',
-        ACTIVE_PROFILE_NAME.STANDARD_USER => 'Standard User'
-    };
-
 
     
     
@@ -168,6 +157,17 @@ public with sharing class Util {
         }
         return activeEntries;
     }
+    // 在下面获取User可用的简档的名字
+    public enum ACTIVE_PROFILE_NAME {
+        SYSTEM_ADMINISTRATOR,
+        STANDARD_USER
+    }
+
+    private static Map<ACTIVE_PROFILE_NAME,String> getUserProfileNames = new Map<ACTIVE_PROFILE_NAME,String>{
+        ACTIVE_PROFILE_NAME.SYSTEM_ADMINISTRATOR => 'System Administrator',
+        ACTIVE_PROFILE_NAME.STANDARD_USER => 'Standard User'
+    };
+
     
 
 }

@@ -1,8 +1,6 @@
 public virtual class ApprovalUtil {
 
 
-
-
     public static List<Approval.ProcessSubmitRequest> ApprovalUtilHandle(ApprovalFlowInput input){
         List<Approval.ProcessSubmitRequest> approvalProcessList =  new List<Approval.ProcessSubmitRequest>();
         if(input.recordId instanceof String){
